@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.logo img {
+    height: 50px;
+    vertical-align: middle;
+}
+
+.logo h1 {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 0 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.banner {
+    background: url('../icon/L.E.I.png') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.noticias {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+.noticias-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.noticia {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width:  50px;  /* Largura fixa para uniformizar os blocos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.noticia h3 {
+    margin: 15px 10px 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.noticia img {
+    width: 30%; /* Faz a imagem ocupar toda a largura do contêiner */
+    height: auto; /* Ajusta a altura automaticamente */
+    display: block;
+}
+
+.noticia p {
+    margin: 10px;
+    font-size: 1em;
+    color: #666;
+}
+
+.data {
+    font-size: 0.9em;
+    color: #666;
+    text-align: right;
+    margin: 0 10px 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    float: inherit;
+}
+
+.redes-sociais img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+/* Classes de status */
+.status-pendente {
+    background-color: #ffeb3b;
+    color: black;
+    font-weight: bold;
+}
+
+.status-finalizado {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+}
+
+.status-nao-resolvido {
+    background-color: #f44336;
+    color: white;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+td button {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+td button:hover {
+    background-color: #0056b3;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 5px 0;
+}
+
+form input[type="text"] {
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form button {
+    padding: 5px;
+    margin-top: 10px;
+    width: 100px;
+    align-self: flex-start;
+}
+
+form button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+form button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+form button[type="button"] {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    margin-left: 10px;
+}
+
+form button[type="button"]:hover {
+    background-color: #c82333;
+}
