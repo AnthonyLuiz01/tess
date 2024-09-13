@@ -7,6 +7,12 @@ $nome = $_POST['nome'];
 $contato = $_POST['contato'];
 $problema = $_POST['problema'];
 
+// Validação simples dos dados
+if (empty($area) || empty($nome) || empty($contato) || empty($problema)) {
+    echo "Todos os campos são obrigatórios.";
+    exit();
+}
+
 // Inserir no banco de dados
 $sql = "INSERT INTO chamados (area, nome, contato, problema, status, data_criacao) VALUES (?, ?, ?, ?, 'Pendente', NOW())";
 $stmt = $conn->prepare($sql);
@@ -62,21 +68,25 @@ if ($stmt->execute()) {
     $options = [
         'http' => [
             'method' => 'POST',
-            'header' => "Content-Type:application/x-www-form-urlencoded\r\n",
+            'header' => "Content-Type: application/x-www-form-urlencoded\r\n",
             'content' => http_build_query($telegramData),
         ]
     ];
 
     $context = stream_context_create($options);
-    file_get_contents($telegramUrl, false, $context);
+    $result = file_get_contents($telegramUrl, false, $context);
+
+    if ($result === FALSE) {
+        echo "Erro ao enviar a mensagem para o Telegram.";
+    }
 
     // Redireciona para a página de suporte com mensagem de sucesso
     header("Location: ../view/suporte.php?status=success");
     exit();
 } else {
-    echo "Erro: " . $stmt->error;
+    echo "Erro ao inserir o chamado: " . $stmt->error;
 }
 
-
+$stmt->close();
 $conn->close();
 ?>

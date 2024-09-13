@@ -11,12 +11,24 @@
     <link rel="icon" type="image/x-icon" href="../favicon.ico">  <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assents/css/style.css">
+
+    <!-- JavaScript para atualizar a página -->
+    <script type="text/javascript">
+        // Função para atualizar a página a cada X segundos
+        function refreshPage() {
+            setTimeout(function() {
+                location.reload(); // Atualiza a página
+            }, 30000); // Intervalo de 30 segundos (30000 milissegundos)
+        }
+        // Chama a função quando a página é carregada
+        window.onload = refreshPage;
+    </script>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-    <a class="navbar-brand" href="../controlls/add_news.php">
+    <a class="navbar-brand" href="index.php">
     <img src="L.E.I.png" alt="Logo" style="width: 50px; height: auto;">
     <span style="vertical-align: middle;">CTI</span>
 </a>
@@ -31,9 +43,6 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Serviços</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Projetos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./view/suporte.php">Suporte</a>
@@ -56,7 +65,7 @@
 
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    echo "<div class='card img-thumbnai m-3 'style='width:14rem; '>";
+                    echo "<div class='card img-thumbnail m-3 'style='width:14rem; '>";
                     if ($row['imagem']) {
                         echo "<img src='" . $row['imagem'] . "' alt='" . $row['titulo'] . "' class='card-img-top'>";
                     }
@@ -77,3 +86,9 @@
 </main>
 
 <?php include('./view/footer/footer.php'); ?>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
