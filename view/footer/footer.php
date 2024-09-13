@@ -7,7 +7,7 @@
                 <p>Telefone: <a href="tel:+551112345678" class="text-white">(11) 1234-5678</a></p>
             </div>
         <div class="row mt-4">
-            <div class="col-12 text-center">
+            <div class="col-12  text-center">
                 <small>&copy; 2024 CTI - Coordenação de Tecnologia da Informação. Todos os direitos reservados.</small>
             </div>
         </div>

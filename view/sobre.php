@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -15,7 +16,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-    <a class="navbar-brand" href="../controlls/add_news.php">
+    <a class="navbar-brand" href="../index.php">
     <img src="../L.E.I.png" alt="Logo" style="width: 50px; height: auto;">
     <span style="vertical-align: middle;">CTI</span>
 </a>
@@ -30,9 +31,6 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../index.php">Serviços</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Projetos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="suporte.php">Suporte</a>
